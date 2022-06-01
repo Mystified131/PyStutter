@@ -5,7 +5,7 @@ import datetime
 from RandFunct import random_number
 from RandFunct2 import random_number2
 
-for reps in range(3):
+for reps in range(1):
 
     stuttertrax = []
 
@@ -62,15 +62,17 @@ for reps in range(3):
 
                 altAudio = altAudio + newAudio[slpt:slend]
 
-                sttr = random_number2(50, 225)
+                sttr = random_number2(150, 350)
 
-                sttrinc = random_number2(3, 6)
-
-                sval = slend - sttr
-
-                stutAud = newAudio[sval:slend]
+                sttrinc = random_number2(8, 16)
 
                 for ctr in range(sttrinc):
+
+                    sttr = int(sttr * .66)
+
+                    sval = slend - sttr
+
+                    stutAud = newAudio[sval:slend]
 
                     altAudio = altAudio + stutAud
 
