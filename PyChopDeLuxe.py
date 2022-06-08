@@ -98,7 +98,7 @@ for reps in range(1):
         attenuate_db = 0
         accentuate_db = .24
         #goldsound = -18
-        goldsound = -15
+        goldsound = -17
         stsound = -23
 
         leng = len(newAudio)
