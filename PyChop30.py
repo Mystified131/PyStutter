@@ -70,7 +70,7 @@ for reps in range(1):
 
         #Volboost optional
 
-        vb = 13
+        vb = 2
 
         chopAudio += vb
 
