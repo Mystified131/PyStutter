@@ -105,7 +105,7 @@ for reps in range(1):
 
         startvol = get_loudness(newAudio, leng)
 
-        if (startvol < -11 and startvol > -18.5) and leng > 100000:
+        if (startvol < -11 or startvol > -18.5) and leng > 100000:
 
             newAudio2 = reduce_volume(newAudio, startvol)
 
@@ -113,17 +113,25 @@ for reps in range(1):
 
             #newAudio3 = (newAudio2 - attenuate_db).overlay(filtered + accentuate_db)
 
-            loudn = get_loudness(newAudio2, leng)
+        if not ((startvol < -11 or startvol > -18.5) and leng > 100000):
 
-            print(loudn)
+            newAudio2 = newAudio
 
-            if loudn <= goldsound:
-                chvol = (goldsound - loudn)
-                newAudio = newAudio2 + chvol
+        loudn = get_loudness(newAudio2, leng)
 
-            if loudn > goldsound:
-                chvol = (loudn - goldsound)
-                newAudio = newAudio2 - chvol
+        print(loudn)
+
+        if loudn <= goldsound:
+            chvol = (goldsound - loudn)
+            newAudio = newAudio2 + chvol
+
+        if loudn > goldsound:
+            chvol = (loudn - goldsound)
+            newAudio = newAudio2 - chvol
+
+        loudn = get_loudness(newAudio2, leng)
+
+        print(loudn)
       
         audlen = len(newAudio)
 
