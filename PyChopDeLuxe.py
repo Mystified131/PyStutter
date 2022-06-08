@@ -129,7 +129,7 @@ for reps in range(1):
             chvol = (loudn - goldsound)
             newAudio = newAudio2 - chvol
 
-        loudn = get_loudness(newAudio2, leng)
+        loudn = get_loudness(newAudio, leng)
 
         print(loudn)
       
