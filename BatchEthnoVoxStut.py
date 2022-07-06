@@ -154,6 +154,6 @@ print("Your stutter file(s) can be found in the VoxOut folder.")
 
 print("")
 
-call(["python", "BatchEthnoAtmosStut.py"])
+call(["python", "BatchDeleterLocal.py"])
 
 ## THE GHOST OF THE SHADOW ##

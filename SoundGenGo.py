@@ -10,6 +10,6 @@ print("Initiating Sequence.")
 
 print("")
 
-call(["python", "BatchEthnoSoundsStut.py"])
+call(["python", "AtmoMod1.py"])
 
 ## THE GHOST OF THE SHADOW ##
