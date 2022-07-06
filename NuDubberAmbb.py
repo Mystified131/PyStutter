@@ -101,7 +101,7 @@ while plist:
     plist = infile.readline()
 infile.close()
 
-trtot = 150
+trtot = 50
 
 suctot = 0
 

@@ -149,7 +149,7 @@ for ctr in range(50):
             newAudio = newAudio - newvol
             newAudio = newAudio.fade_in(100)
             newAudio = newAudio.fade_out(100)
-            sil1 = random_number2(12000, 17000)
+            sil1 = random_number2(12000, 14000)
             back = AudioSegment.silent(duration = sil1)
             newAudio = newAudio + back
         if solonum > 3 and solonum < 8:
@@ -164,8 +164,8 @@ for ctr in range(50):
             newAudio = newAudio - newvol
             newAudio = newAudio.fade_in(3000)
             newAudio = newAudio.fade_out(3000)
-            sil1 = random_number2(10000, 14000)
-            sil2 = random_number2(18000, 25000)
+            sil1 = random_number2(10000, 12000)
+            sil2 = random_number2(12000, 13000)
             front = AudioSegment.silent(duration = sil1)
             back = AudioSegment.silent(duration = sil2)
             newAudio = front + newAudio + back
@@ -181,8 +181,8 @@ for ctr in range(50):
             newAudio = newAudio - newvol
             newAudio = newAudio.fade_in(3000)
             newAudio = newAudio.fade_out(3000)
-            sil1 = random_number2(22000, 25000)
-            sil2 = random_number2(13000, 18000)
+            sil1 = random_number2(8000, 9000)
+            sil2 = random_number2(12000, 14000)
             front = AudioSegment.silent(duration = sil1)
             back = AudioSegment.silent(duration = sil2)
             newAudio = front + newAudio + back
@@ -204,16 +204,16 @@ for ctr in range(50):
                 newAudio += addAudio
             newAudio = newAudio.fade_in(3000)
             newAudio = newAudio.fade_out(3000)
-            sil1 = random_number2(10000, 14000)
-            sil2 = random_number2(13000, 17000)
+            sil1 = random_number2(3000, 8000)
+            sil2 = random_number2(6000, 8000)
             front = AudioSegment.silent(duration = sil1)
             back = AudioSegment.silent(duration = sil2)
             newAudio = front + newAudio + back
 
         dic = random_number(10)
         if dic == 7:
-            sil1 = random_number(22000)
-            sil2 = random_number(18000)
+            sil1 = random_number(9000)
+            sil2 = random_number(10000)
             newAudio = newAudio - 5
             front = AudioSegment.silent(duration = sil1)
             back = AudioSegment.silent(duration = sil2)
@@ -272,8 +272,8 @@ for ctr in range(50):
             newAudio = newAudio - newvol
             newAudio = newAudio.fade_in(3000)
             newAudio = newAudio.fade_out(3000)
-            sil1 = random_number(12000)
-            sil2 = random_number(16000)
+            sil1 = random_number(6000)
+            sil2 = random_number(12000)
             front = AudioSegment.silent(duration = sil1)
             back = AudioSegment.silent(duration = sil2)
             newAudio = front + newAudio + back
@@ -292,8 +292,8 @@ for ctr in range(50):
             newAudio = newAudio - newvol
             newAudio = newAudio.fade_in(3000)
             newAudio = newAudio.fade_out(3000)
-            sil1 = random_number(20000)
-            sil2 = random_number(22000)
+            sil1 = random_number(10000)
+            sil2 = random_number(8000)
             front = AudioSegment.silent(duration = sil1)
             back = AudioSegment.silent(duration = sil2)
             newAudio = front + newAudio + back
@@ -318,16 +318,16 @@ for ctr in range(50):
                 newAudio += addAudio
             newAudio = newAudio.fade_in(3000)
             newAudio = newAudio.fade_out(3000)
-            sil1 = random_number(10000)
-            sil2 = random_number(14000)
+            sil1 = random_number(6000)
+            sil2 = random_number(8000)
             front = AudioSegment.silent(duration = sil1)
             back = AudioSegment.silent(duration = sil2)
             newAudio = front + newAudio + back
 
         dic = random_number(10)
         if dic == 7:
-            sil1 = random_number(60000)
-            sil2 = random_number(50000)
+            sil1 = random_number(30000)
+            sil2 = random_number(20000)
             newAudio = newAudio -3
             front = AudioSegment.silent(duration = sil1)
             back = AudioSegment.silent(duration = sil2)
