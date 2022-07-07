@@ -555,16 +555,8 @@ for subdir, dirs, files in os.walk('C:\\Users\\mysti\\Coding\\Pystutter'):
     for file in files:
         filepath = subdir + os.sep + file
 
-        if (filepath.endswith(".ogg")) or (filepath.endswith(".wav")) or (filepath.endswith(".txt")) or (filepath.endswith(".sfk"))   and ("Generate" in str(filepath))  or ("GenCh" in str(filepath)) or ("vsamp" in str(filepath)) or ("newsound" in str(filepath)):
+        if (filepath.endswith(".wav")) and ('AtmosOut' not in str(filepath)) and ('VoxOut' not in str(filepath)) and ('SoundsOut' not in str(filepath)):
             os. remove(filepath) 
-
-print("")
-
-print("The designated files have been removed. Thank you.")
-
-print("")
-
-#call(["python", "C:\\Users\\mysti\\Coding\\Pystutter\\StartTrackEvolvingHere.py"])
 
 call(["python", "BatchEthnoSoundsStut.py"])
 

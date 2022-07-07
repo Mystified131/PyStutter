@@ -148,11 +148,13 @@ for reps in range(3):
         oufil = "C:\\Users\\mysti\\Coding\\PyStutter\\SoundsOut\\Stutterout_" + trnam[y] + "_" + str(tim) + ".wav"    
         altAudio.export(oufil, format="wav")
 
-print("")
 
-print("Your stutter file(s) can be found in the SoundsOut folder.")
+for subdir, dirs, files in os.walk('C:\\Users\\mysti\\Coding\\Pystutter'):
+    for file in files:
+        filepath = subdir + os.sep + file
 
-print("")
+        if (filepath.endswith(".wav")) and ('AtmosOut' not in str(filepath)) and ('VoxOut' not in str(filepath)) and ('SoundsOut' not in str(filepath)):
+            os. remove(filepath) 
 
 call(["python", "BatchEthnoVoxStut.py"])
 

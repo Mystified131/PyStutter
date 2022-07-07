@@ -148,11 +148,12 @@ for reps in range(3):
         oufil = "C:\\Users\\mysti\\Coding\\PyStutter\\VoxOut\\Stutterout_" + trnam[y] + "_" + str(tim) + ".wav"    
         altAudio.export(oufil, format="wav")
 
-print("")
+for subdir, dirs, files in os.walk('C:\\Users\\mysti\\Coding\\Pystutter'):
+    for file in files:
+        filepath = subdir + os.sep + file
 
-print("Your stutter file(s) can be found in the VoxOut folder.")
-
-print("")
+        if (filepath.endswith(".wav")) and ('AtmosOut' not in str(filepath)) and ('VoxOut' not in str(filepath)) and ('SoundsOut' not in str(filepath)):
+            os. remove(filepath) 
 
 call(["python", "BatchDeleterLocal.py"])
 
