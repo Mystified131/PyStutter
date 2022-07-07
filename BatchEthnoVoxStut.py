@@ -63,7 +63,7 @@ print("This may take a few minutes.")
 
 print("")
 
-for reps in range(3):
+for reps in range(1):
 
     stuttertrax = []
 
@@ -147,13 +147,6 @@ for reps in range(3):
     
         oufil = "C:\\Users\\mysti\\Coding\\PyStutter\\VoxOut\\Stutterout_" + trnam[y] + "_" + str(tim) + ".wav"    
         altAudio.export(oufil, format="wav")
-
-for subdir, dirs, files in os.walk('C:\\Users\\mysti\\Coding\\Pystutter'):
-    for file in files:
-        filepath = subdir + os.sep + file
-
-        if (filepath.endswith(".wav")) and ('AtmosOut' not in str(filepath)) and ('VoxOut' not in str(filepath)) and ('SoundsOut' not in str(filepath)):
-            os. remove(filepath) 
 
 call(["python", "BatchDeleterLocal.py"])
 
