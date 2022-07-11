@@ -47,7 +47,7 @@ for ctr in range(50):
     for m in trackname:
         if m.isalnum():
             tracknam += m
-    outstr = 'C:\\Users\\mysti\\Coding\\Pystutter\\EthnoSounds' + str(ctr) + tracknam +  '.wav'
+    outstr = 'C:\\Users\\mysti\\Coding\\Pystutter\\EthnoSounds\\SoundsOut' + str(ctr) + tracknam +  '.wav'
     print("")
     print("Copying: ", trackname)
     print("")
@@ -69,11 +69,11 @@ for reps in range(3):
 
     trnam = []
 
-    for subdir, dirs, files in os.walk('C:\\Users\\mysti\\Coding\\PyStutter'):
+    for subdir, dirs, files in os.walk('C:\\Users\\mysti\\Coding\\PyStutter\\SoundsOut'):
         for file in files:
             filepath = subdir + os.sep + file
 
-            if filepath.endswith(".wav") and  ("sOut" not in filepath):
+            if filepath.endswith(".wav") :
                 stuttertrax.append(filepath)
                 trnam.append(str(file[:-4]))
 
