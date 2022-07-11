@@ -15,9 +15,9 @@ from RandFunct2 import random_number2
 
 #srchstr = 'C:\\Users\\mysti\\Media_Files\\Sounds\\Acid_Loops'
 
-srchstr = 'E:\\EthnoSoundSources'
+#srchstr = 'E:\\EthnoSoundSources'
 
-#srchstr = 'E:\\Acid_Loops'
+srchstr = 'H:\\Acid_Loops\\WorldEthnicAfricanSources'
 
 ethcont = []
 
@@ -73,7 +73,7 @@ for reps in range(1):
         for file in files:
             filepath = subdir + os.sep + file
 
-            if filepath.endswith(".wav"):
+            if filepath.endswith(".wav") and ("sOut" not in filepath):
                 stuttertrax.append(filepath)
                 trnam.append(str(file[:-4]))
 

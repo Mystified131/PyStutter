@@ -96,7 +96,8 @@ for subdir, dirs, files in os.walk('C:\\Users\\mysti\\Coding\\Pystutter'):
         filepath = subdir + os.sep + file
 
         if (filepath.endswith(".wav")) and ('AtmosOut' not in str(filepath)) and ('VoxOut' not in str(filepath)) and ('SoundsOut' not in str(filepath)):
-            os. remove(filepath) 
+            #os. remove(filepath) 
+            print("")
 
 
 ##THE GHOST OF THE SHADOW##

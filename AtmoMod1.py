@@ -12,7 +12,7 @@ from RandFunct2 import random_number2
 
 #srchstr = 'C:\\Users\\mysti\\Media_Files\\Sounds\\Acid_Loops'
 
-srchstr = 'E:\\Acid_Loops'
+srchstr = 'H:\\Acid_Loops'
 
 contentdrones = []
 
