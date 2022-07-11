@@ -47,7 +47,7 @@ for ctr in range(50):
     for m in trackname:
         if m.isalnum():
             tracknam += m
-    outstr = 'C:\\Users\\mysti\\Coding\\Pystutter\\Voxsout\\EthnoVox' + str(ctr) + tracknam + '.wav'
+    outstr = 'C:\\Users\\mysti\\Coding\\Pystutter\\Voxsout' + 'EthnoVox' + str(ctr) + tracknam + '.wav'
     print("")
     print("Copying: ", trackname)
     print("")

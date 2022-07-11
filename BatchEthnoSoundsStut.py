@@ -31,6 +31,8 @@ for subdir, dirs, files in os.walk(srchstr):
 
                 ethcont.append(filepath)
 
+print(ethcont)
+
 print("")
 
 print("Gathering Root Sounds.")
@@ -47,7 +49,8 @@ for ctr in range(50):
     for m in trackname:
         if m.isalnum():
             tracknam += m
-    outstr = 'C:\\Users\\mysti\\Coding\\Pystutter\\EthnoSounds\\SoundsOut' + str(ctr) + tracknam +  '.wav'
+    outstr = 'C:\\Users\\mysti\\Coding\\Pystutter\\SoundsOut' + "EthnoSounds" +  str(ctr) + tracknam +  '.wav'
+
     print("")
     print("Copying: ", trackname)
     print("")
