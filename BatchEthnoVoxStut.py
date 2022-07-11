@@ -142,10 +142,10 @@ for reps in range(1):
 
                 print("")
 
-                oufil = "C:\\Users\\mysti\\Coding\\PyStutter\\VoxOut\\Stutterout_" + trnam[y] + "_" + str(tim) + ".wav"
+                oufil = "C:\\Users\\mysti\\Coding\\PyStutter\\VoxsOut\\Stutterout_" + trnam[y] + "_" + str(tim) + ".wav"
                 altAudio.export(oufil, format="wav")
     
-        oufil = "C:\\Users\\mysti\\Coding\\PyStutter\\VoxOut\\Stutterout_" + trnam[y] + "_" + str(tim) + ".wav"    
+        oufil = "C:\\Users\\mysti\\Coding\\PyStutter\\Voxsout\\Stutterout_" + trnam[y] + "_" + str(tim) + ".wav"    
         altAudio.export(oufil, format="wav")
 
 call(["python", "BatchDeleterLocal.py"])
