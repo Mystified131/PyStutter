@@ -56,15 +56,7 @@ for reps in range(3):
 
             outAudio = newAudio[0:0]
 
-            itermax = int(audlen / 1000)
-
-            itermin = int(audlen / 2000)
-
-            bennuma = random_number2(itermin, itermax)
-
-            benmult = random_number2(2, 5)
-
-            bennum = bennuma * benmult
+            bennum = random_number2(8, 24)
 
             for ctr in range(bennum):
 
