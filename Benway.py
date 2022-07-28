@@ -62,7 +62,7 @@ for reps in range(3):
 
             bennuma = random_number2(itermin, itermax)
 
-            benmult = random_number2(1, 3)
+            benmult = random_number2(2, 5)
 
             bennum = bennuma * benmult
 
@@ -72,7 +72,15 @@ for reps in range(3):
 
                 ranval2 = random_number2(ranval1, audlen)
 
-                newSeg = newAudio[ranval1:ranval2]
+                ranquot = random_number2(1, 6)
+
+                ranvaltrunc = int(ranval2 / ranquot)
+
+                newSeg = newAudio[ranval1:ranvaltrunc]
+
+                newSeg = newSeg.fade_in(10)
+
+                newSeg = newSeg.fade_out(10)
 
                 outAudio += newSeg
 
