@@ -35,7 +35,7 @@ for reps in range(3):
 
         audlen = len(newAudio)
 
-        if audlen < 3001 or audlen > 100000:
+        if audlen < 3001 or audlen > 1000000:
 
             print("")
 
@@ -43,7 +43,7 @@ for reps in range(3):
 
             print("")
 
-        if audlen > 3000 and audlen < 100001:
+        if audlen > 3000 and audlen < 1000001:
 
             right_now = datetime.datetime.now().isoformat()
             list = []
@@ -56,7 +56,7 @@ for reps in range(3):
 
             outAudio = newAudio[0:0]
 
-            bennum = random_number2(8, 24)
+            bennum = random_number2(18, 42)
 
             for ctr in range(bennum):
 
