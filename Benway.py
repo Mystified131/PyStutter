@@ -60,7 +60,7 @@ for reps in range(3):
 
             for ctr in range(bennum):
 
-                ranval1 = random_number(audlen)
+                ranval1 = random_number(audlen - 2900)
 
                 ranval2 = random_number2(ranval1, audlen)
 
