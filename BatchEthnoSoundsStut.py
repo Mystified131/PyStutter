@@ -25,7 +25,7 @@ for subdir, dirs, files in os.walk(srchstr):
     for file in files:
         filepath = subdir + os.sep + file
          
-        if  filepath.endswith(".wav") and (("Ethno" in filepath) or ("World" in filepath)) and (("Drone" in filepath) or ("Voi" in filepath)) :  
+        if  filepath.endswith(".wav") and ("Eth" in filepath) and (("Drone" in filepath) or ("Voi" in filepath)) :  
 
             if os.path.getsize(filepath) >  1000000:
 
@@ -49,7 +49,7 @@ for ctr in range(50):
     for m in trackname:
         if m.isalnum():
             tracknam += m
-    outstr = 'C:\\Users\\mysti\\Coding\\Pystutter\\SoundsOut' + "EthnoSounds" +  str(ctr) + tracknam +  '.wav'
+    outstr = 'C:\\Users\\mysti\\Coding\\Pystutter\\SoundsOut\\' + "EthnoSounds" +  str(ctr) + tracknam +  '.wav'
 
     print("")
     print("Copying: ", trackname)

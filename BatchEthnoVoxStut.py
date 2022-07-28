@@ -47,7 +47,7 @@ for ctr in range(50):
     for m in trackname:
         if m.isalnum():
             tracknam += m
-    outstr = 'C:\\Users\\mysti\\Coding\\Pystutter\\Voxsout' + 'EthnoVox' + str(ctr) + tracknam + '.wav'
+    outstr = 'C:\\Users\\mysti\\Coding\\Pystutter\\Voxsout\\' + 'EthnoVox' + str(ctr) + tracknam + '.wav'
     print("")
     print("Copying: ", trackname)
     print("")
@@ -97,53 +97,64 @@ for reps in range(1):
         print("Please wait. Working on: " + atrack)
 
         print("")
+
+        try:
             
-        newAudio = AudioSegment.from_wav(atrack)
+            newAudio = AudioSegment.from_wav(atrack)
 
-        audlen = len(newAudio)
+            audlen = len(newAudio)
 
-        slen = random_number2(1000,3000)
+            slen = random_number2(1000,3000)
 
-        slctot = (int(audlen/slen))
+            slctot = (int(audlen/slen))
 
-        slpt = 0
+            slpt = 0
 
-        altAudio = newAudio[0:0]
+            altAudio = newAudio[0:0]
 
-        for ctr in range(slctot):
+            for ctr in range(slctot):
 
-            try:
+                try:
 
-                slen = random_number2(1000,3000)
+                    slen = random_number2(1000,3000)
 
-                slend = slpt + slen
+                    slend = slpt + slen
 
-                altAudio = altAudio + newAudio[slpt:slend]
+                    altAudio = altAudio + newAudio[slpt:slend]
 
-                sttr = random_number2(50, 225)
+                    sttr = random_number2(50, 225)
 
-                sttrinc = random_number2(3, 6)
+                    sttrinc = random_number2(3, 6)
 
-                sval = slend - sttr
+                    sval = slend - sttr
 
-                stutAud = newAudio[sval:slend]
+                    stutAud = newAudio[sval:slend]
 
-                for ctr in range(sttrinc):
+                    for ctr in range(sttrinc):
 
-                    altAudio = altAudio + stutAud
+                        altAudio = altAudio + stutAud
 
-                slpt  += slen
+                    slpt  += slen
 
-            except:
+                except:
 
-                print("")
+                    print("")
 
-                print("Process Termination")
+                    print("Process Termination")
 
-                print("")
+                    print("")
 
-                oufil = "C:\\Users\\mysti\\Coding\\PyStutter\\VoxsOut\\Stutterout_" + trnam[y] + "_" + str(tim) + ".wav"
-                altAudio.export(oufil, format="wav")
+                    oufil = "C:\\Users\\mysti\\Coding\\PyStutter\\VoxsOut\\Stutterout_" + trnam[y] + "_" + str(tim) + ".wav"
+                    altAudio.export(oufil, format="wav")
+
+        except:
+
+            print("")
+
+            print("Render error.")
+
+            print("")
+            
     
         oufil = "C:\\Users\\mysti\\Coding\\PyStutter\\Voxsout\\Stutterout_" + trnam[y] + "_" + str(tim) + ".wav"    
         altAudio.export(oufil, format="wav")
