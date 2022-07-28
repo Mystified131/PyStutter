@@ -35,15 +35,15 @@ for reps in range(3):
 
         audlen = len(newAudio)
 
-        if audlen < 3001:
+        if audlen < 3001 or audlen > 100000:
 
             print("")
 
-            print("Audio Too Short. Please use .wav files over 3 seconds in length.")
+            print("Audio wrong length. Please use .wav files between 3 and 100 seconds in length.")
 
             print("")
 
-        if audlen > 3000:
+        if audlen > 3000 and audlen < 100001:
 
             right_now = datetime.datetime.now().isoformat()
             list = []
