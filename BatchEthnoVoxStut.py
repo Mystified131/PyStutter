@@ -17,7 +17,7 @@ from RandFunct2 import random_number2
 
 #srchstr = 'E:\\EthnoSoundSources'
 
-srchstr = 'H:\\Acid_Loops\\WorldEthicAfricanSources'
+srchstr = 'H:\\RoomSampsPystutter'
 
 ethcont = []
 

@@ -17,7 +17,9 @@ from RandFunct2 import random_number2
 
 #srchstr = 'E:\\EthnoSoundSources'
 
-srchstr = 'H:\\Acid_Loops'
+#srchstr = 'H:\\Acid_Loops'
+
+srchstr = 'H:\\'
 
 ethcont = []
 
@@ -25,7 +27,7 @@ for subdir, dirs, files in os.walk(srchstr):
     for file in files:
         filepath = subdir + os.sep + file
          
-        if  filepath.endswith(".wav") and ("Eth" in filepath) and (("Drone" in filepath) or ("Voi" in filepath)) :  
+        if  filepath.endswith(".wav") and ("Horror" in filepath):  
 
             if os.path.getsize(filepath) >  1000000:
 

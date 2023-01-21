@@ -22,7 +22,7 @@ for subdir, dirs, files in os.walk(srchstr):
     for file in files:
         filepath = subdir + os.sep + file
         
-        if  filepath.endswith(".wav") and  (("Drone" in filepath)  or (("Strings" in filepath) ) or (("Pad" in filepath) ) and ("Eth" in filepath)) :  
+        if  filepath.endswith(".wav") and  ("Pad" in filepath)  and ("Horror" in filepath ) :  
         #if  filepath.endswith(".wav") and (("Chant" in filepath) or  ("HomeLoops2022" in filepath)) and  (("Pad"in filepath) or ("Strings" in filepath)):  
                          
             contentpepper.append(filepath)
